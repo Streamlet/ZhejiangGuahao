@@ -1,0 +1,40 @@
+body {
+	min-width: 400px;
+}
+
+.tabs div {
+	min-height: 320px;
+}
+
+input[type=text] {
+	width: 160px;
+}
+
+a {
+	word-break: break-all;
+}
+
+a:link {
+	text-decoration: none;
+	color: #5ea8de;
+}
+
+a:visited {
+	color: #5ea8de;
+}
+
+a:hover {
+	color: #ce8b10;
+}
+
+#info table {
+	border: 0;
+}
+
+tr td {
+	padding: 2px 0;
+}
+
+.desc {
+	color: #ce8b10;
+}

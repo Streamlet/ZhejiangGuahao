@@ -1,0 +1,40 @@
+{
+	"manifest_version": 2,
+	"name": "浙江挂号助手",
+	"version": "1.0",
+
+	"author": "溪流软件工作室",
+
+	"description": "帮助您在浙江省预约挂号平台快速抢号",
+	"icons" : {
+		"19": "images/icon19.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+
+	"content_scripts": [
+		{
+      "matches": [ "http://www.zj12580.cn/hos/info/*" ],
+			"js": ["js/lib/jquery-1.11.3.js", "js/common.js", "js/favorite_hospital.js"]
+		},
+		{
+      "matches": [ "http://www.zj12580.cn/dept/*" ],
+			"js": ["js/lib/jquery-1.11.3.js", "js/common.js", "js/favorite_department.js", "js/auto_refresh.js"]
+		},
+		{
+      "matches": [ "http://www.zj12580.cn/order/num?*" ],
+			"js": ["js/lib/jquery-1.11.3.js", "js/auto_fill.js"]
+		}
+	],
+
+  "browser_action": {
+    "default_icon": "images/icon19.png",
+    "default_title": "浙江挂号助手",
+    "default_popup": "popup.html"
+  },
+
+	"permissions" : [
+		"storage",
+		"tabs"
+	]
+}
